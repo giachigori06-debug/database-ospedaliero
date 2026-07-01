@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Database Ospedaliero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="logged-out">
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+<div class="sidebar">
+    <h2 class="brand-block"><img class="brand-icon" src="assets/icons/hospital-db-logo.png" alt=""> <span>Database Ospedaliero</span><small>Clinical workspace</small></h2>
+
+    <button onclick="pagina='nuovo'; render()"><img class="nav-icon" src="assets/icons/patient-boy.png" alt=""> <span>Nuovo Paziente</span></button>
+    <button onclick="pagina='prontoSoccorso'; render()"><img class="nav-icon" src="assets/icons/doctor-cross.png" alt=""> <span>Pronto Soccorso</span></button>
+    <button onclick="pagina='ps'; render()"><img class="nav-icon" src="assets/icons/patient-girl.png" alt=""> <span>Lista Pazienti</span></button>
+    <button onclick="pagina='ricoveri'; render()"><img class="nav-icon" src="assets/icons/iv-bag.png" alt=""> <span>Ricoveri e letti</span></button>
+
+    <hr>
+
+    <button onclick="pagina='chirurgia'; render()"><img class="nav-icon" src="assets/icons/doctor-injection.png" alt=""> <span>Chirurgia</span></button>
+    <button onclick="pagina='medicinaInterna'; render()"><img class="nav-icon" src="assets/icons/doctor-cross.png" alt=""> <span>Medicina Interna</span></button>
+    <button onclick="pagina='ortopedia'; render()"><img class="nav-icon" src="assets/icons/skull.png" alt=""> <span>Ortopedia</span></button>
+    <button onclick="pagina='cardiologia'; render()"><img class="nav-icon" src="assets/icons/heart.png" alt=""> <span>Cardiologia</span></button>
+    <button onclick="pagina='neurologia'; render()"><img class="nav-icon" src="assets/icons/brain.png" alt=""> <span>Neurologia</span></button>
+    <button onclick="pagina='rianimazione'; render()"><img class="nav-icon" src="assets/icons/ecg.png" alt=""> <span>Rianimazione</span></button>
+
+    <hr>
+
+    <button onclick="pagina='personale'; render()"><img class="nav-icon" src="assets/icons/nurse.png" alt=""> <span>Gestione personale</span></button>
+    <button onclick="pagina='archivio'; render()"><img class="nav-icon" src="assets/icons/microscope.png" alt=""> <span>Archivio</span></button>
+
+    <hr>
+
+    <div class="user" id="utenteLoggato">
+        Nessun operatore connesso
+    </div>
+</div>
+    <!-- MAIN -->
+    <div class="main">
+
+        <div id="app"></div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="access-control.js"></script>
+<script src="clinical-enhancements.js"></script>
+<script src="ai-simulation.js"></script>
+<script>render()</script>
+
+</body>
+</html>

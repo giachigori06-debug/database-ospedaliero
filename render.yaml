@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: database-ospedaliero
+    env: python
+    plan: starter
+    buildCommand: ""
+    startCommand: python3 ai-backend.py
+    disk:
+      name: hospital-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: HOSPITAL_DATA_FILE
+        value: /var/data/hospital-data.json
